@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,19 +15,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'welcome';
 });
-Route::get('product', function () {
-    return "Estoy en la pagina de producto";
-});
+Route::get('product', [ProductController::class, 'listProducts']);
 
-Route::get('product/create', function () {
-    return "Formulario de la creacion de archivos";
-});
+Route::get('detail', [ProductController::class, 'detailProduct']);
 
-Route::get('product/{id}', function ($id) {
-    return "Estoy en la pagina del producto $id";
-});
-Route::get('product/{id}/{category}', function ($id, $category) {
-    return "Estoy en la pagina del producto $id en la categoria $category";
-});
+// Route::get('product/create', function () {
+//     return "Formulario de la creacion de archivos";
+// });
+
+// Route::get('product/{id}', function ($id) {
+//     return "Estoy en la pagina del producto $id";
+// });
+// Route::get('product/{id}/{category}', function ($id, $category) {
+//     return "Estoy en la pagina del producto $id en la categoria $category";
+// });
