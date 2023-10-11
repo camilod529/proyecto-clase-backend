@@ -8,10 +8,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Detalle</title>
+    <title>Productos</title>
 </head>
 
 <body>
+
+    {{-- Encabezado --}}
+
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -55,33 +58,17 @@
             </div>
         </div>
     </nav>
+    {{-- Contenido --}}
+    @yield('content')
 
-    <div>
-        <h1 class="text-center m-5">Detail products</h1>
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-md-8">
-                    <img src="img/producto1.png" alt="producto 1" class="img-fluid">
-                </div>
-                <div class="col-md-4">
-                    <h1>Computador</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla quod ipsum, maxime illum quos
-                        labore nobis eaque obcaecati. Saepe quidem eius doloremque eum ipsam! Tenetur voluptatem aperiam
-                        nisi mollitia? Voluptas!</p>
-                    <h3>$1.000.000</h3>
-                    <button class="btn btn-primary my-background">Añadir al carrito</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Footer de bootstrap literal -->
+    {{-- Footer --}}
     <footer class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary">
         <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
             <div class="row">
                 <div class="col-lg-3 mb-3">
-                    <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none" href="/"
-                        aria-label="Bootstrap">
+                    <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none"
+                        href="/" aria-label="Bootstrap">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block me-2"
                             viewBox="0 0 118 94" role="img">
                             <title>Bootstrap</title>
@@ -134,7 +121,8 @@
                                 rel="noopener">Bootstrap 4</a></li>
                         <li class="mb-2"><a href="https://github.com/twbs/icons" target="_blank"
                                 rel="noopener">Icons</a></li>
-                        <li class="mb-2"><a href="https://github.com/twbs/rfs" target="_blank" rel="noopener">RFS</a>
+                        <li class="mb-2"><a href="https://github.com/twbs/rfs" target="_blank"
+                                rel="noopener">RFS</a>
                         </li>
                         <li class="mb-2"><a href="https://github.com/twbs/examples/" target="_blank"
                                 rel="noopener">Examples repo</a></li>
@@ -157,11 +145,11 @@
                 </div>
             </div>
 
+    </footer>
 
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-                crossorigin="anonymous">
-            </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
